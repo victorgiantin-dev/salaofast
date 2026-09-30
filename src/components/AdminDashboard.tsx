@@ -654,19 +654,19 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToHome }) 
 
           {/* DDL SQL Schema Helper */}
           <div className="bg-zinc-900 text-white p-6 rounded-2xl border border-zinc-800 shadow-md">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
               <div>
                 <h4 className="font-display text-base font-bold text-amber-400">
-                  Script SQL para Criação das Tabelas no Supabase
+                  Script SQL Completo (Tabelas, RLS e Storage Buckets com Políticas)
                 </h4>
                 <p className="text-zinc-400 text-xs mt-0.5">
-                  Copie o código abaixo e execute no <strong>SQL Editor</strong> do seu Supabase para criar as tabelas `profiles`, `appointments`, `blocked_slots` e `services`.
+                  Copie o código abaixo e execute no <strong>SQL Editor</strong> do seu Supabase para criar as tabelas, índices e os buckets de armazenamento (fotos e avatares) com todas as políticas RLS salvas.
                 </p>
               </div>
 
               <button
                 onClick={handleCopySql}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-zinc-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-zinc-950 bg-amber-400 hover:bg-amber-300 rounded-lg transition-colors cursor-pointer shrink-0"
               >
                 {copiedSql ? (
                   <>
@@ -682,7 +682,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToHome }) 
               </button>
             </div>
 
-            <pre className="p-4 bg-zinc-950 rounded-xl border border-zinc-800 text-[11px] font-mono text-zinc-300 overflow-x-auto max-h-64 scrollbar-thin">
+            <pre className="p-4 bg-zinc-950 rounded-xl border border-zinc-800 text-[11px] font-mono text-zinc-300 overflow-x-auto max-h-80 scrollbar-thin">
               {SUPABASE_SQL_SCHEMA}
             </pre>
           </div>
