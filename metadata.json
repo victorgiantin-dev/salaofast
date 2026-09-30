@@ -1,0 +1,6 @@
+{
+  "name": "Salão Fast - Beleza & Agendamentos",
+  "description": "Salão Fast - Agendamento online rápido, serviços premium, produtos exclusivos e gestão de horários para clientes e equipe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
